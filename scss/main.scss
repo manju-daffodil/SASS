@@ -1,0 +1,144 @@
+@import "abc";
+
+@import "partials";
+
+
+$textColor:white;
+$fontSize:24px;
+$background:green;
+   
+    // Variable 
+@mixin commonStyle(){
+  width:500px;
+  padding-top: 20px;
+  background-color: green;
+  text-align: center; 
+ 
+}
+
+
+
+
+@mixin myMixin($value:red){
+  width:(200px / 10px)+px;
+  height:100px;
+  background-color:$value;
+}
+
+.A1{
+  @include myMixin();
+}
+.B1{
+  @include myMixin(green);
+}
+
+
+// .h1 {
+//   background-color: if(1>3,blue,green);   // if function 
+  
+// }
+
+   // if directive  and mixins also 
+
+// @mixin  f1() {
+//   @if(1>3){
+//      background-color: blue;
+//   }
+// }
+
+    // Nesting 
+
+// .div1 {
+//   .h1 {
+//     color: red;
+//   }
+//   .p {
+//     color: blue;
+//   }
+// }
+
+
+
+// Partials    
+
+// .h1{
+//     @include fun2();
+//     text-align: center;
+// }
+
+// Arithemetic opeartor
+
+// .p {
+//   font-size: 10px + 2px;    // Addition Operator
+// }
+//  .p {
+//    font-size: 10px - 2px;    // Subtraction
+//  }
+//  .p {
+//    font-size: 10px * 2;       // Multiplications
+//  }
+
+// .p {
+//   font-size: (10px / 2px) + px;     // divisions
+// }
+
+// .p {
+//   color: if(1>5,red,blue); // comparisons operator
+// }
+
+// .p {
+//   color: if(1>5 and 1<5,red,blue);  //Logical Operator
+// }
+
+    // looping
+
+  @mixin loop(){
+      @for $i from 1 through 5{
+       .div-#{$i}{
+           font-size: 100px * $i;
+                text-align:center;
+                background-color: black;
+                color: white;
+              
+          }
+      }
+  }
+  * body { @include loop();}
+// while loop
+
+// $i : 5;   
+//   @mixin while-loop(){
+//     @while $i>0 {
+//         @if($i%2==0){
+//             .div-#{$i}{
+//               text-align:center;
+//               background-color: black;
+//               color: white;
+//             } 
+//         }
+//         $i : $i - 1;
+//     }
+// }
+//  * body { @include while-loop();}
+
+  // SASS function 
+
+  // @function doit(){
+  //   @return 300px;
+  // }
+  // .p { 
+  //   font-size: doit();
+  // }
+
+  // SASS Directive
+
+  // .doit {
+  //   color: red;
+  // }
+
+  // .p {
+  //   @extend .doit;
+  //   background-color: yellow;
+  // }
+  
+    

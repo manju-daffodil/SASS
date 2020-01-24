@@ -1,0 +1,47 @@
+.A1 {
+  width: 20px;
+  height: 100px;
+  background-color: red;
+}
+
+.B1 {
+  width: 20px;
+  height: 100px;
+  background-color: green;
+}
+
+* body .div-1 {
+  font-size: 100px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+* body .div-2 {
+  font-size: 200px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+* body .div-3 {
+  font-size: 300px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+* body .div-4 {
+  font-size: 400px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+* body .div-5 {
+  font-size: 500px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */
